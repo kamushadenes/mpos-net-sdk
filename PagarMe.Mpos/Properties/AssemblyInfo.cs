@@ -26,3 +26,5 @@ using System.Runtime.CompilerServices;
 //[assembly: AssemblyKeyFile("")]
 
 [assembly: InternalsVisibleTo("PagarMe.Mock")]
+[assembly: InternalsVisibleTo("PagarMe.AutomatedTests")]
+
