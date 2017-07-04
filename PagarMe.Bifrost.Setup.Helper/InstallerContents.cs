@@ -28,7 +28,8 @@ namespace PagarMe.Bifrost.Setup.Helper
             var exe = Path.Combine(originFiles, "setup.exe");
             File.Delete(exe);
 
-            var zipDestination = $"{updatesPath}bifrost-installer-{currentVersion}.zip";
+            var zipDestination = Path.Combine(updatesPath, $"bifrost-installer-{currentVersion}.zip");
+            File.Delete(zipDestination);
             ZipFile.CreateFromDirectory(originFiles, zipDestination, CompressionLevel.Optimal, false);
         }
 
